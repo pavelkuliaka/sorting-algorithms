@@ -1,4 +1,9 @@
-def merge_sort(array: list) -> list:
+from collections.abc import Iterable
+
+from _types import Comparable
+
+
+def merge_sort(array: Iterable[Comparable]) -> Iterable[Comparable]:
     if len(array) <= 1:
         return array
 
@@ -9,7 +14,9 @@ def merge_sort(array: list) -> list:
     return merge(left, right)
 
 
-def merge(left: list, right: list) -> list:
+def merge(
+    left: Iterable[Comparable], right: Iterable[Comparable]
+) -> Iterable[Comparable]:
     result = []
     i = j = 0
 

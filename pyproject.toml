@@ -1,0 +1,38 @@
+[project]
+name = "sorting-algorithms"
+version = "0.1.0"
+description = "A package with various sorting algorithms and tests for them"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    
+]
+
+[dependency-groups]
+dev = [
+    "pyright[nodejs]>=1.1.409",
+    "pytest>=9.0.3",
+    "ruff>=0.15.15",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = ["-v", "--tb=short"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "RUF", "UP"]
+ignore = ["RUF001"]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
+skip-magic-trailing-comma = false

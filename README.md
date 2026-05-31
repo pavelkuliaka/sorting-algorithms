@@ -4,10 +4,25 @@ A package with various sorting algorithms and tests for them, implemented in Pyt
 
 A package includes bubble sort, heap sort, quick sort and merge sort algorithms
 
-## Requirements
+## Code quality
 
-* `Python 3.13 or higher`
-* `pytest`
+### Install dev dependencies
+
+`uv sync --extra dev`
+
+### Tests
+
+`uv run pytest`
+
+### Linting
+
+`uv run ruff check .`
+
+`uv run ruff format . --check`
+
+### Typing
+
+`uv run pyright`
 
 ## License
 

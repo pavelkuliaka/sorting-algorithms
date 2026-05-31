@@ -1,11 +1,12 @@
-import pytest
 import random
 from collections import Counter
 
-from src.heap_sort import heap_sort
-from src.quick_sort import quick_sort
+import pytest
+
 from src.bubble_sort import bubble_sort
+from src.heap_sort import heap_sort
 from src.merge_sort import merge_sort
+from src.quick_sort import quick_sort
 
 SORTING_FUNCTIONS = [heap_sort, quick_sort, bubble_sort, merge_sort]
 

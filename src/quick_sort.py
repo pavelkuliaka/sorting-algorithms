@@ -1,4 +1,9 @@
-def quick_sort(array: list) -> list:
+from collections.abc import Iterable
+
+from _types import Comparable
+
+
+def quick_sort(array: Iterable[Comparable]) -> Iterable[Comparable]:
     if len(array) <= 1:
         return array
 
